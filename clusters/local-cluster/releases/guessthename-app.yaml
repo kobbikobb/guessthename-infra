@@ -4,7 +4,7 @@ metadata:
   name: guessthename-app
   namespace: flux-system
 spec:
-  interval: 5m
+  interval: 15m
   chart:
     spec:
       chart: ./helm # Path to the Charts within the source Repo
@@ -16,5 +16,6 @@ spec:
   values:
     replicaCount: 1
   install:
+    timeout: 10m
     remediation:
       retries: 3
