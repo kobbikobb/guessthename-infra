@@ -1,0 +1,5 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+resources:
+  - sources/guessthename-source.yaml
+  - releases/guessthename-app.yaml

@@ -1,0 +1,20 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: guessthename-app
+  namespace: flux-system
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: ./helm # Path to the Charts within the source Repo
+      version: "0.1.0"
+      sourceRef:
+        kind: GitRepository
+        name: guessthename
+        namespace: flux-system
+  values:
+    replicaCount: 1
+  install:
+    remediation:
+      retries: 3
