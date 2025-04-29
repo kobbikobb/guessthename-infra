@@ -13,7 +13,7 @@ spec:
       sourceRef:
         kind: GitRepository
         name: guessthename
-        namespace: flux-system
+        namespace: default
   values:
     replicaCount: 1
   install:
