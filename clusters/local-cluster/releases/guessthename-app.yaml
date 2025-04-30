@@ -4,12 +4,12 @@ metadata:
   name: guessthename-app
   namespace: default
 spec:
-  interval: 15m
+  interval: 1m
   timeout: 10m
   chart:
     spec:
       chart: ./helm # Path to the Charts within the source Repo
-      version: "0.1.0"
+      version: "0.2.0"
       sourceRef:
         kind: GitRepository
         name: guessthename
